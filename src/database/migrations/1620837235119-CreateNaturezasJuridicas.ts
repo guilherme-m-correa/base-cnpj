@@ -17,7 +17,7 @@ export default class CreateNaturezasJuridicas1620837235119
           },
           {
             name: 'codigo',
-            type: 'number',
+            type: 'integer',
             isUnique: true,
           },
           {
