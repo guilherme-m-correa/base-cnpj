@@ -105,6 +105,11 @@ class DataService {
             codigo = codigo.slice(1, -1);
             descricao = descricao.slice(1, -1);
 
+            console.log({
+              codigo,
+              descricao,
+            });
+
             const municipioExists = await this.municipiosRepository.findOne(
               Number(codigo),
             );
@@ -112,11 +117,6 @@ class DataService {
             if (!municipioExists) {
               await this.municipiosRepository.create({
                 codigo: Number(codigo),
-                descricao,
-              });
-
-              console.log({
-                codigo,
                 descricao,
               });
             }
@@ -144,17 +144,17 @@ class DataService {
             codigo = codigo.slice(1, -1);
             descricao = descricao.slice(1, -1);
 
+            console.log({
+              codigo,
+              descricao,
+            });
+
             const naturezaJuridicaExists =
               await this.naturezasJuridicasRepository.findOne(Number(codigo));
 
             if (!naturezaJuridicaExists) {
               await this.naturezasJuridicasRepository.create({
                 codigo: Number(codigo),
-                descricao,
-              });
-
-              console.log({
-                codigo,
                 descricao,
               });
             }
@@ -180,6 +180,11 @@ class DataService {
             codigo = codigo.slice(1, -1);
             descricao = descricao.slice(1, -1);
 
+            console.log({
+              codigo,
+              descricao,
+            });
+
             const paisExists = await this.paisesRepository.findOne(
               Number(codigo),
             );
@@ -187,11 +192,6 @@ class DataService {
             if (!paisExists) {
               await this.paisesRepository.create({
                 codigo: Number(codigo),
-                descricao,
-              });
-
-              console.log({
-                codigo,
                 descricao,
               });
             }
@@ -219,17 +219,17 @@ class DataService {
             codigo = codigo.slice(1, -1);
             descricao = descricao.slice(1, -1);
 
+            console.log({
+              codigo,
+              descricao,
+            });
+
             const qualificacaoExists =
               await this.qualificacoesSociosRepository.findOne(Number(codigo));
 
             if (!qualificacaoExists) {
               await this.qualificacoesSociosRepository.create({
                 codigo: Number(codigo),
-                descricao,
-              });
-
-              console.log({
-                codigo,
                 descricao,
               });
             }
